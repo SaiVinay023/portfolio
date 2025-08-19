@@ -3,24 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predev": "contentlayer build",
-    "dev": "concurrently -k -n cl,web -c magenta,cyan \"contentlayer dev\" \"next dev --turbopack\"",
-    "dev:poll": "WATCHPACK_POLLING=true WATCHPACK_POLLING_INTERVAL=800 CHOKIDAR_USEPOLLING=1 CHOKIDAR_INTERVAL=800 next dev --turbopack",
-    "build": "contentlayer build && next build",
+    "dev": "contentlayer dev -- pnpm next dev",
+    "build": "pnpm dlx contentlayer build "build": "contentlayer build && next build""build": "contentlayer build && next build" next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/is-prop-valid": "^1.3.1",
     "class-variance-authority": "^0.7.1",
     "framer-motion": "^12.23.12",
-    "geist": "^1.4.2",
-    "lucide-react": "^0.540.0",
     "next": "15.4.6",
     "next-seo": "^6.8.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "react-icons": "^5.5.0",
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
@@ -31,7 +25,6 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "concurrently": "^9.2.0",
     "contentlayer": "^0.3.4",
     "eslint": "^9",
     "eslint-config-next": "15.4.6",

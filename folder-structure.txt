@@ -1,0 +1,101 @@
+.
+├── .env.local
+├── .gitignore
+├── README.md
+├── content
+│   ├── education
+│   │   ├── nie.mdx
+│   │   └── unige.mdx
+│   ├── experience
+│   │   ├── aceteq.mdx
+│   │   └── manydesigns.mdx
+│   ├── projects
+│   │   ├── personal-eclaim.mdx
+│   │   ├── personal-eplan.mdx
+│   │   └── sample.mdx
+│   └── research
+│       └── iit.mdx
+├── contentlayer.config.ts
+├── eslint.config.mjs
+├── folder-structure.txt
+├── next-env.d.ts
+├── next.config.ts
+├── next.config.ts.bak
+├── package.json
+├── package.json.broken.1755546127
+├── package.tmp.json
+├── postcss.config.mjs
+├── public
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── og.png
+│   ├── profile
+│   │   ├── avatar.jpg
+│   │   └── banner.jpg
+│   ├── projects
+│   │   ├── eclaim-cover.jpg
+│   │   ├── ecommerce-cover.jpg
+│   │   ├── eplan-cover.jpg
+│   │   └── realtime-cover.jpg
+│   ├── vercel.svg
+│   └── window.svg
+├── src
+│   ├── app
+│   │   ├── about
+│   │   │   ├── page.tsx
+│   │   │   └── page.tsx.bak
+│   │   ├── contact
+│   │   │   └── page.tsx
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   ├── page.tsx.bak
+│   │   └── projects
+│   │       ├── [slug]
+│   │       ├── github
+│   │       └── page.tsx
+│   ├── components
+│   │   ├── Hero.tsx
+│   │   ├── ProfileHeader.tsx
+│   │   ├── ProjectCard.tsx
+│   │   ├── ProjectGrid.tsx
+│   │   ├── SocialRow.tsx
+│   │   ├── StackCloud.tsx
+│   │   ├── TechIcons.tsx
+│   │   ├── github
+│   │   │   ├── RepoCard.tsx
+│   │   │   └── RepoGroups.tsx
+│   │   ├── mdx-content.tsx
+│   │   ├── profile
+│   │   │   ├── AboutIntro.tsx
+│   │   │   ├── Highlights.tsx
+│   │   │   └── SkillsMatrix.tsx
+│   │   └── resume
+│   │       ├── EducationList.tsx
+│   │       ├── ExperienceList.tsx
+│   │       └── ResearchList.tsx
+│   ├── content
+│   │   ├── education
+│   │   │   ├── nie.mdx
+│   │   │   └── unige.mdx
+│   │   ├── experience
+│   │   │   ├── aceteq.mdx
+│   │   │   └── manydesigns.mdx
+│   │   ├── projects
+│   │   │   ├── internal-dashboard.mdx
+│   │   │   └── real-time-chat.mdx
+│   │   └── research
+│   │       ├── emaro.mdx
+│   │       └── iit.mdx
+│   ├── data
+│   │   └── profile.ts
+│   └── lib
+│       ├── github.ts
+│       ├── repo-categories.ts
+│       └── seo.ts
+├── tailwind.config.ts
+└── tsconfig.json
+
+27 directories, 72 files
