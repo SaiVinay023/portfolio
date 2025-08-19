@@ -8,12 +8,7 @@ export function generateStaticParams() {
   return allProjects.map((p) => ({ slug: p.slug }))
 }
 
-// ✅ Correct props typing (no PageProps import)
-export default function ProjectPage({
-  params,
-}: {
-  params: { slug: string }
-}) {
+export default function ProjectPage({ params }: { params: { slug: string } }) {
   const { slug } = params
   const project = allProjects.find((p) => p.slug === slug)
 
@@ -31,10 +26,7 @@ export default function ProjectPage({
         {project.stack?.length ? (
           <div className="flex flex-wrap gap-2">
             {project.stack.map((s) => (
-              <span
-                key={s}
-                className="text-xs rounded-full border px-2 py-1"
-              >
+              <span key={s} className="text-xs rounded-full border px-2 py-1">
                 {s}
               </span>
             ))}
@@ -54,7 +46,8 @@ export default function ProjectPage({
         )}
       </div>
 
-      <MDXContent code={project.body} />
+      {/* ✅ Pass correct code */}
+      <MDXContent code={project.body.code} />
 
       {project.impact?.length ? (
         <section className="not-prose mt-8 rounded-2xl border p-6">

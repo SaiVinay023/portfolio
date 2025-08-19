@@ -2,7 +2,6 @@ import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import { allProjects } from '.contentlayer/generated'
 
 export const Project = defineDocumentType(() => ({
   name: 'Project',
@@ -22,10 +21,10 @@ export const Project = defineDocumentType(() => ({
     url: { type: 'string', required: false },
   },
   computedFields: {
-    //url: { type: 'string', resolve: (p) => `/projects/${p.slug}` },
     slug: {
       type: 'string',
-      resolve: (doc) => doc.slug || doc._raw.sourceFileName.replace(/\.mdx$/, ''),
+      resolve: (doc) =>
+        doc.slug || doc._raw.sourceFileName.replace(/\.mdx$/, ''),
     },
   },
 }))
@@ -38,8 +37,8 @@ export const Experience = defineDocumentType(() => ({
     company: { type: 'string', required: true },
     role: { type: 'string', required: true },
     location: { type: 'string', required: true },
-    start: { type: 'string', required: true }, // ex: May 2023
-    end: { type: 'string', required: true },   // ex: Nov 2023 or Present
+    start: { type: 'string', required: true },
+    end: { type: 'string', required: true },
     stack: { type: 'list', of: { type: 'string' } },
     order: { type: 'number' },
   },
@@ -69,16 +68,17 @@ export const Education = defineDocumentType(() => ({
     school: { type: 'string', required: true },
     degree: { type: 'string', required: true },
     location: { type: 'string', required: true },
-    graduation: { type: 'string', required: true }, // ex: Oct 2024
+    graduation: { type: 'string', required: true },
     order: { type: 'number' },
   },
 }))
 
-// contentlayer.config.ts (inside makeSource({...}))
 export default makeSource({
   contentDirPath: 'content',
   documentTypes: [Project, Experience, Research, Education],
-  mdx: { /* your plugins */ },
-  disableImportAliasWarning: true
+  mdx: {
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+  },
+  disableImportAliasWarning: true,
 })
-
