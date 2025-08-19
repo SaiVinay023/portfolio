@@ -8,8 +8,14 @@ export function generateStaticParams() {
   return allProjects.map((p) => ({ slug: p.slug }))
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = allProjects.find((p) => p.slug === params.slug)
+// ✅ Correct props type
+export default function ProjectPage({
+  params,
+}: {
+  params: { slug: string }
+}) {
+  const { slug } = params
+  const project = allProjects.find((p) => p.slug === slug)
 
   if (!project) return notFound()
 
