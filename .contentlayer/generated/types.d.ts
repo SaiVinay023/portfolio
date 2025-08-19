@@ -55,6 +55,7 @@ export type Project = {
   impact?: string[] | undefined
   cover: string
   order?: number | undefined
+  url?: string | undefined
   /** MDX file body */
   body: MDX
   slug: string

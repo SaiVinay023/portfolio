@@ -6,7 +6,7 @@
     "predev": "contentlayer build",
     "dev": "concurrently -k -n cl,web -c magenta,cyan \"contentlayer dev\" \"next dev --turbopack\"",
     "dev:poll": "WATCHPACK_POLLING=true WATCHPACK_POLLING_INTERVAL=800 CHOKIDAR_USEPOLLING=1 CHOKIDAR_INTERVAL=800 next dev --turbopack",
-    "build": "contentlayer build || echo 'contentlayer failed' && next build",
+    "build": "contentlayer build && next build",
     "start": "next start",
     "lint": "next lint"
   },
