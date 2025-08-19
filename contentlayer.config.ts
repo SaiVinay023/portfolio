@@ -19,12 +19,13 @@ export const Project = defineDocumentType(() => ({
     impact: { type: 'list', of: { type: 'string' } },
     cover: { type: 'string', required: true },
     order: { type: 'number' },
+    url: { type: 'string', required: false },
   },
   computedFields: {
     //url: { type: 'string', resolve: (p) => `/projects/${p.slug}` },
     slug: {
-      type: "string",
-      resolve: (doc) => doc._raw.flattenedPath,
+      type: 'string',
+      resolve: (doc) => doc.slug || doc._raw.sourceFileName.replace(/\.mdx$/, ''),
     },
   },
 }))
