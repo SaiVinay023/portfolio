@@ -14,6 +14,7 @@ export default function ProjectPage({
 }: {
   params: { slug: string }
 }) {
+
   const { slug } = params
   const project = allProjects.find((p) => p.slug === slug)
 
