@@ -21,7 +21,11 @@ export const Project = defineDocumentType(() => ({
     order: { type: 'number' },
   },
   computedFields: {
-    url: { type: 'string', resolve: (p) => `/projects/${p.slug}` },
+    //url: { type: 'string', resolve: (p) => `/projects/${p.slug}` },
+    slug: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath,
+    },
   },
 }))
 

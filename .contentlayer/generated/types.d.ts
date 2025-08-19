@@ -57,7 +57,7 @@ export type Project = {
   order?: number | undefined
   /** MDX file body */
   body: MDX
-  url: string
+  slug: string
 }
 
 export type Research = {

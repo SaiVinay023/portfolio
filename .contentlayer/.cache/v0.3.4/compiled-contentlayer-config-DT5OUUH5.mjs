@@ -17,7 +17,11 @@ var Project = defineDocumentType(() => ({
     order: { type: "number" }
   },
   computedFields: {
-    url: { type: "string", resolve: (p) => `/projects/${p.slug}` }
+    //url: { type: 'string', resolve: (p) => `/projects/${p.slug}` },
+    slug: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath
+    }
   }
 }));
 var Experience = defineDocumentType(() => ({
@@ -79,4 +83,4 @@ export {
   Research,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-6PMEAVW3.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-DT5OUUH5.mjs.map
