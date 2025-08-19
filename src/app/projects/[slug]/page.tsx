@@ -2,15 +2,18 @@ import { allProjects } from "contentlayer/generated"
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import { MDXContent } from "@/components/mdx-content"
-import type { PageProps } from "next"
 
 // Generate static paths for [slug]
 export function generateStaticParams() {
   return allProjects.map((p) => ({ slug: p.slug }))
 }
 
-// ✅ Correct props type & MDX body usage
-export default function ProjectPage({ params }: PageProps<{ slug: string }>) {
+// ✅ Correct props typing (no PageProps import)
+export default function ProjectPage({
+  params,
+}: {
+  params: { slug: string }
+}) {
   const { slug } = params
   const project = allProjects.find((p) => p.slug === slug)
 
@@ -51,7 +54,6 @@ export default function ProjectPage({ params }: PageProps<{ slug: string }>) {
         )}
       </div>
 
-      {/* ✅ Pass body directly instead of body.code */}
       <MDXContent code={project.body} />
 
       {project.impact?.length ? (
