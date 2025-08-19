@@ -8,7 +8,7 @@ export function generateStaticParams() {
   return allProjects.map((p) => ({ slug: p.slug }))
 }
 
-// ✅ Explicit type for params
+// ✅ Explicit type for params (no Promise!)
 interface ProjectPageProps {
   params: { slug: string }
 }
@@ -26,24 +26,31 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         </div>
         <h1 className="text-4xl font-semibold">{project.title}</h1>
         <p className="max-w-2xl opacity-80">{project.summary}</p>
-        <div className="flex flex-wrap gap-2">
-          {project.stack?.map((s) => (
-            <span
-              key={s}
-              className="text-xs rounded-full border px-2 py-1"
-            >
-              {s}
-            </span>
-          ))}
-        </div>
-        <div className="relative overflow-hidden rounded-2xl border mt-4">
-          <Image
-            src={project.cover}
-            alt={project.title}
-            width={1440}
-            height={900}
-          />
-        </div>
+
+        {project.stack?.length ? (
+          <div className="flex flex-wrap gap-2">
+            {project.stack.map((s) => (
+              <span
+                key={s}
+                className="text-xs rounded-full border px-2 py-1"
+              >
+                {s}
+              </span>
+            ))}
+          </div>
+        ) : null}
+
+        {project.cover && (
+          <div className="relative overflow-hidden rounded-2xl border mt-4">
+            <Image
+              src={project.cover}
+              alt={project.title}
+              width={1440}
+              height={900}
+              priority
+            />
+          </div>
+        )}
       </div>
 
       <MDXContent code={project.body.code} />
