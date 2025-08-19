@@ -3,18 +3,19 @@ import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import { MDXContent } from '@/components/mdx-content'
 
-// ✅ Tell Next.js what slugs exist
+// Generate static paths for [slug]
 export function generateStaticParams() {
   return allProjects.map((p) => ({ slug: p.slug }))
 }
 
-// ✅ Explicit type for params (no Promise!)
-interface ProjectPageProps {
-  params: { slug: string }
-}
-
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = allProjects.find((p) => p.slug === params.slug)
+// ✅ Correct props type for Next.js 15
+export default async function ProjectPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
+  const project = allProjects.find((p) => p.slug === slug)
 
   if (!project) return notFound()
 
