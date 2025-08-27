@@ -4,13 +4,14 @@
 import { profile } from '@/data/profile'
 
 export default function CertificatesList() {
-  if (!profile.certificates) return null
+  const certs = profile.certificates ?? []
+  if (certs.length === 0) return null
 
   return (
     <section className="space-y-4">
       <h2 className="text-2xl font-semibold">Certificates</h2>
       <ul className="space-y-2">
-        {profile.certificates.map((cert, i) => (
+        {certs.map((cert, i) => (
           <li
             key={i}
             className="p-3 border rounded-md bg-gray-50 flex justify-between"

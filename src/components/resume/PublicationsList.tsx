@@ -4,26 +4,27 @@
 import { profile } from '@/data/profile'
 
 export default function PublicationsList() {
-  if (!profile.publications) return null
+  const pubs = profile.publications ?? []
+  if (pubs.length === 0) return null
 
   return (
     <section className="space-y-4">
       <h2 className="text-2xl font-semibold">Publications</h2>
-      <ul className="space-y-4">
-        {profile.publications.map((pub, i) => (
-          <li key={i} className="p-4 border rounded-lg bg-gray-50">
-            <div className="font-medium">{pub.title}</div>
-            <p className="text-sm text-gray-600">
-              {pub.venue} • {pub.year}
-            </p>
-            {pub.link && (
+      <ul className="space-y-3">
+        {pubs.map((p, i) => (
+          <li key={i} className="p-4 border rounded-md bg-gray-50">
+            <div className="font-medium">{p.title}</div>
+            <div className="text-sm opacity-70">
+              {[p.authors?.join(', '), p.venue, p.year].filter(Boolean).join(' • ')}
+            </div>
+            {p.link && (
               <a
-                href={pub.link}
+                href={p.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 text-sm hover:underline"
+                className="text-sm underline mt-1 inline-block"
               >
-                View Paper
+                View
               </a>
             )}
           </li>

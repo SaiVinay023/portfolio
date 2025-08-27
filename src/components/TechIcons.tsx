@@ -1,3 +1,4 @@
+// src/components/TechIcons.tsx
 'use client'
 
 import * as React from 'react'
@@ -8,7 +9,9 @@ import {
 } from 'react-icons/si'
 import { Cloud } from 'lucide-react'
 
-export const TECH: Record<string, React.ComponentType<{ size?: number }>> = {
+type IconProps = { size?: number | string }  // ← accept both
+
+export const TECH: Record<string, React.ComponentType<IconProps>> = {
   Nextjs: SiNextdotjs,
   React: SiReact,
   Vue: SiVuedotjs,
@@ -26,7 +29,8 @@ export const TECH: Record<string, React.ComponentType<{ size?: number }>> = {
   'GitHub Actions': SiGithubactions,
   Jest: SiJest,
   LangChain: SiLangchain,
-  AWS: Cloud   // use lucide icon instead of missing SiAmazonaws
+  // Wrap lucide icon so it matches the ComponentType<IconProps> shape
+  AWS: ((props: IconProps) => <Cloud {...props} />) as React.ComponentType<IconProps>,
 }
 
 export function TechIcon({ name }: { name: keyof typeof TECH }) {

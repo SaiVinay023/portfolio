@@ -63,6 +63,27 @@ export const profile = {
 
   // ✅ Added this field
   languages: ['English', 'Telugu', 'Hindi'],
+   certificates: [
+    { name: 'AWS Certified Cloud Practitioner', year: '2024' },
+    { name: 'Google Professional Cloud Architect', year: '2023' },
+    // add/remove as you like
+  ],
+  
+  publications: [
+    {
+      title: 'Efficient XYZ Scheduling with ABC Heuristics',
+      authors: ['Saivinay Manda', 'Co-author Name'],
+      venue: 'ICSE',
+      year: '2024',
+      link: 'https://example.com/paper-xyz',
+    },
+    {
+      title: 'A Practical Guide to Type-Safe Frontends',
+      authors: ['Saivinay Manda'],
+      venue: 'Medium',
+      year: '2023',
+    },
+  ],
 
   skills: {
     frontend: [

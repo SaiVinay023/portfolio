@@ -1,8 +1,12 @@
 // contentlayer.config.ts
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 var Project = defineDocumentType(() => ({
   name: "Project",
-  filePathPattern: `projects/*.mdx`,
+  // must be a non-empty string
+  filePathPattern: "projects/*.mdx",
   contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
@@ -15,35 +19,26 @@ var Project = defineDocumentType(() => ({
     impact: { type: "list", of: { type: "string" } },
     cover: { type: "string", required: true },
     order: { type: "number" },
-    url: { type: "string", required: false }
-  },
-  computedFields: {
-    //url: { type: 'string', resolve: (p) => `/projects/${p.slug}` },
-    slug: {
-      type: "string",
-      resolve: (doc) => doc.slug || doc._raw.sourceFileName.replace(/\.mdx$/, "")
-    }
+    url: { type: "string" }
   }
 }));
 var Experience = defineDocumentType(() => ({
   name: "Experience",
-  filePathPattern: `experience/*.mdx`,
+  filePathPattern: "experience/*.mdx",
   contentType: "mdx",
   fields: {
     company: { type: "string", required: true },
     role: { type: "string", required: true },
     location: { type: "string", required: true },
     start: { type: "string", required: true },
-    // ex: May 2023
     end: { type: "string", required: true },
-    // ex: Nov 2023 or Present
     stack: { type: "list", of: { type: "string" } },
     order: { type: "number" }
   }
 }));
 var Research = defineDocumentType(() => ({
   name: "Research",
-  filePathPattern: `research/*.mdx`,
+  filePathPattern: "research/*.mdx",
   contentType: "mdx",
   fields: {
     org: { type: "string", required: true },
@@ -58,23 +53,25 @@ var Research = defineDocumentType(() => ({
 }));
 var Education = defineDocumentType(() => ({
   name: "Education",
-  filePathPattern: `education/*.mdx`,
+  filePathPattern: "education/*.mdx",
   contentType: "mdx",
   fields: {
     school: { type: "string", required: true },
     degree: { type: "string", required: true },
     location: { type: "string", required: true },
     graduation: { type: "string", required: true },
-    // ex: Oct 2024
     order: { type: "number" }
   }
 }));
 var contentlayer_config_default = makeSource({
   contentDirPath: "content",
   documentTypes: [Project, Experience, Research, Education],
+  // ensure none are undefined
   mdx: {
-    /* your plugins */
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]
   },
+  // you can keep this true to silence the alias warning, but the tsconfig alias is already set
   disableImportAliasWarning: true
 });
 export {
@@ -84,4 +81,4 @@ export {
   Research,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-VFVECT7N.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-FOX5HLEG.mjs.map
