@@ -1,8 +1,8 @@
 // src/components/resume/ResearchList.tsx  (server)
 import { allResearch } from 'contentlayer/generated'
-import { MDXContent } from '@/components/mdx-content'
+import MDXContent from '@/components/mdx-content'
 
-export default function ResearchList() {
+export function ResearchList() {
   const items = [...allResearch].sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
   return (
     <section className="space-y-4">

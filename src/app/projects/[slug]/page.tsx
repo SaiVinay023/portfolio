@@ -1,7 +1,7 @@
 import { allProjects } from 'contentlayer/generated'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import { MDXContent } from '@/components/mdx-content'
+import MDXContent from '@/components/mdx-content'
 
 // Prebuild static slugs
 export function generateStaticParams(): Array<{ slug: string }> {
