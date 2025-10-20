@@ -1,3 +1,6 @@
+import Link from 'next/link'
+
+
 export default function ContactPage() {
   return (
     <section className="space-y-4">
