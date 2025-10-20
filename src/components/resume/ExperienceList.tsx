@@ -1,8 +1,8 @@
 // src/components/resume/ExperienceList.tsx  (server)
-import { allExperience } from 'contentlayer/generated'
+import { allExperiences } from 'contentlayer/generated'
 
 export default function ExperienceList() {
-  const items = [...allExperience].sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+  const items = [...allExperiences].sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
   return (
     <section className="space-y-4">
       <h2 className="text-2xl font-semibold">Experience</h2>
