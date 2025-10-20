@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "dev:poll": "WATCHPACK_POLLING=true WATCHPACK_POLLING_INTERVAL=800 CHOKIDAR_USEPOLLING=1 CHOKIDAR_INTERVAL=800 next dev",
-    "build": "next build",
+    "build": "contentlayer build && next build",
     "start": "next start",
     "lint": "next lint",
     "cl:dev": "contentlayer dev",

@@ -1,3 +1,4 @@
+// src/components/resume/ResearchList.tsx  (server)
 import { allResearch } from 'contentlayer/generated'
 import { MDXContent } from '@/components/mdx-content'
 

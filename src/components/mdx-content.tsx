@@ -1,16 +1,12 @@
 // src/components/mdx-content.tsx
 'use client'
 
-import * as React from 'react'
 import { useMDXComponent } from 'next-contentlayer/hooks'
+import type { MDXComponents } from 'mdx/types'
 
-type MDXContentProps = {
-  code: string
-  // Map MDX element names (e.g., 'a', 'Image', custom components) to React components
-  components?: Record<string, React.ComponentType<any>>
-}
+type Props = { code: string; components?: MDXComponents }
 
-export function MDXContent({ code, components = {} }: MDXContentProps) {
+export function MDXContent({ code, components = {} }: Props) {
   const Component = useMDXComponent(code)
   return <Component components={components} />
 }

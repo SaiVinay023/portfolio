@@ -5,9 +5,7 @@
       "@/*": ["src/*"],
       "contentlayer/generated": [".contentlayer/generated"]
     },
-
-    "types": ["node"],
-
+    "types": ["node", "contentlayer/generated"],
     "strict": true,
     "skipLibCheck": true,
     "module": "esnext",
