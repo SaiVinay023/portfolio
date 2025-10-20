@@ -2,7 +2,7 @@
 
 import { profile } from '@/data/profile'
 
-export default function SkillsList() {
+export function SkillsList() {
   return (
     <section>
       <h2 className="text-2xl font-bold mb-4">Skills</h2>
