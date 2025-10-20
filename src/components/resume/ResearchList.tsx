@@ -2,7 +2,7 @@
 import { allResearch } from 'contentlayer/generated'
 import MDXContent from '@/components/mdx-content'
 
-export function ResearchList() {
+export default function ResearchList() {
   const items = [...allResearch].sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
   return (
     <section className="space-y-4">
