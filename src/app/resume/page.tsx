@@ -2,7 +2,7 @@
 import EducationList from '@/components/resume/EducationList'
 import ExperienceList from '@/components/resume/ExperienceList'
 import ResearchList from '@/components/resume/ResearchList'
-import SkillsList from '@/components/resume/SkillsList'
+import {SkillsList} from '@/components/resume/SkillsList'
 import PublicationsList from '@/components/resume/PublicationsList'
 import CertificatesList from '@/components/resume/CertificatesList'
 
