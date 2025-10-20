@@ -6,7 +6,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 
 type Props = { code: string; components?: Record<string, React.ComponentType<any>> }
 
-export function MDXContent({ code, components = {} }: Props) {
+export default function MDXContent({ code, components = {} }: Props) {
   const Component = useMDXComponent(code)
   return <Component components={components} />
 }

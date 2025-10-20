@@ -2,7 +2,7 @@
 
 import { profile } from '@/data/profile'
 
-function Row({ title, items }: { title: string; items: string[] }) {
+export default function Row({ title, items }: { title: string; items: string[] }) {
   return (
     <div className="space-y-2">
       <div className="text-sm font-medium opacity-80">{title}</div>
