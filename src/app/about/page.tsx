@@ -6,7 +6,7 @@ import { profile } from '@/data/profile'
 
 export default function AboutPage() {
   return (
-    <main className="max-w-5xl mx-auto px-6 py-12 space-y-16">
+    <main className="max-w-5xl mx-auto px-6 py-12 space-y-16 text-neutral-900 dark:text-neutral-100">
       {/* Hero Section */}
       <section className="flex flex-col md:flex-row items-center gap-8">
         <Image
