@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react'
 import { profile } from '@/data/profile'
@@ -61,6 +59,7 @@ export default function AboutPage() {
                 Technology evolves fast. I stay curious, embrace new challenges, and never stop learning.
               </p>
             </div>
+
             <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg">
               <div className="text-4xl mb-4">🤝</div>
               <h3 className="text-2xl font-bold mb-3">Community First</h3>
@@ -68,6 +67,7 @@ export default function AboutPage() {
                 From building robotics clubs to international collaborations - I believe in lifting others as I climb.
               </p>
             </div>
+
             <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg">
               <div className="text-4xl mb-4">💡</div>
               <h3 className="text-2xl font-bold mb-3">Problem Solving</h3>
@@ -171,6 +171,7 @@ export default function AboutPage() {
                 From India to Italy - I love experiencing new cultures, trying local cuisine, and meeting people from different backgrounds.
               </p>
             </div>
+
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
               <div className="text-3xl mb-3">📚</div>
               <h3 className="text-xl font-bold mb-2">Continuous Reading</h3>
@@ -178,6 +179,7 @@ export default function AboutPage() {
                 Currently diving deep into AI/ML, system design, and occasionally sci-fi novels. Always have a book or article queued up.
               </p>
             </div>
+
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
               <div className="text-3xl mb-3">🤖</div>
               <h3 className="text-xl font-bold mb-2">Tinkering with Hardware</h3>
@@ -185,6 +187,7 @@ export default function AboutPage() {
                 Old habits die hard! Still enjoy building small robotics projects and IoT devices in my spare time.
               </p>
             </div>
+
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
               <div className="text-3xl mb-3">🎮</div>
               <h3 className="text-xl font-bold mb-2">Gaming & Tech</h3>
