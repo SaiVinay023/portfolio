@@ -46,17 +46,15 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     applyTheme(newTheme)
   }
 
-  // Prevent hydration mismatch by not rendering until mounted
-  if (!mounted) {
-    return <>{children}</>
-  }
-
+  // Render children immediately, useTheme will work after mount
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   )
 }
+
+ThemeProvider.displayName = 'ThemeProvider'
 
 export function useTheme() {
   const context = React.useContext(ThemeContext)
