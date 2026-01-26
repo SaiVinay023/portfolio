@@ -26,6 +26,9 @@ export function Navigation() {
           <Link href="/contact" className="hover:underline">
             Contact
           </Link>
+          <Link href="/journey" className="hover:underline">
+            Journey
+          </Link>
         </div>
         <ThemeToggle />
       </div>

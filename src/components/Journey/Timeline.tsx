@@ -1,5 +1,8 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import TimelineItem from './TimelineItem';
+import TimelineFilter, { FilterType } from './TimelineFilter';
 import { TimelineItem as TimelineItemType } from '@/types/timeline';
 
 interface TimelineProps {
@@ -7,8 +10,22 @@ interface TimelineProps {
 }
 
 const Timeline: React.FC<TimelineProps> = ({ items }) => {
+  const [filter, setFilter] = useState<FilterType>('all');
+  
+  // Filter logic for web development roles
+  const filteredItems = filter === 'webdev' 
+    ? items.filter(item => {
+        // Include work experiences with web dev skills
+        if (item.type === 'work' || item.type === 'learning') {
+          const webSkills = ['React', 'Node.js', 'TypeScript', 'Next.js', 'NestJS', 'JavaScript', 'Express'];
+          return item.skills?.some(skill => webSkills.includes(skill));
+        }
+        return false;
+      })
+    : items;
+
   // Sort items by date (newest first)
-  const sortedItems = [...items].sort((a, b) => 
+  const sortedItems = [...filteredItems].sort((a, b) => 
     new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
   );
 
@@ -17,6 +34,9 @@ const Timeline: React.FC<TimelineProps> = ({ items }) => {
       <h2 className="text-4xl font-bold text-center mb-12">
         My Journey
       </h2>
+      
+      {/* Filter */}
+      <TimelineFilter activeFilter={filter} onFilterChange={setFilter} />
       
       <div className="timeline-container max-w-4xl mx-auto relative">
         {/* Vertical line */}
