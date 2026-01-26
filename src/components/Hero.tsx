@@ -32,6 +32,9 @@ export default function Hero() {
           <Link href="/about" className="px-4 py-2 rounded-lg border">
             About me
           </Link>
+          <Link href="/journey" className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:from-blue-700 hover:to-purple-700 transition-all">
+            Discover My Journey →
+          </Link>
         </div>
       </motion.div>
 
