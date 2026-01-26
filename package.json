@@ -7,6 +7,7 @@
     "dev:poll": "WATCHPACK_POLLING=true WATCHPACK_POLLING_INTERVAL=800 CHOKIDAR_USEPOLLING=1 CHOKIDAR_INTERVAL=800 next dev",
     "start": "next start",
     "build": "contentlayer2 build && next build",
+    "lint": "next lint",
     "cl:dev": "contentlayer2 dev",
     "cl:build": "contentlayer2 build"
   },
