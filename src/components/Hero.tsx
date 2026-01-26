@@ -26,7 +26,7 @@ export default function Hero() {
         </p>
 
         <div className="flex gap-3">
-          <Link href="/projects" className="px-4 py-2 rounded-lg bg-black text-white">
+          <Link href="/projects" className="px-4 py-2 rounded-lg bg-black text-white dark:bg-white dark:text-black">
             View projects
           </Link>
           <Link href="/about" className="px-4 py-2 rounded-lg border">
@@ -36,7 +36,7 @@ export default function Hero() {
       </motion.div>
 
       <motion.div
-        className="pointer-events-none absolute inset-x-0 -z-10 mx-auto mt-10 h-64 max-w-4xl blur-3xl"
+        className="pointer-events-none absolute inset-x-0 -z-10 mx-auto mt-10 h-64 max-w-4xl blur-3xl opacity-50 dark:opacity-30"
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.5 }}
         transition={{ duration: 0.8 }}
