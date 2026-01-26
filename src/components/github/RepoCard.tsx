@@ -4,7 +4,7 @@ import type { Repo } from '@/lib/github'
 export default function RepoCard({ repo }: { repo: Repo }) {
   const updated = new Date(repo.pushed_at)
   return (
-    <div className="rounded-2xl border p-4 hover:bg-neutral-50 dark:hover:bg-neutral-900">
+    <div className="rounded-2xl border p-4 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
       <div className="flex items-center justify-between gap-3">
         <Link href={repo.html_url} className="font-medium hover:underline" target="_blank">
           {repo.name}
