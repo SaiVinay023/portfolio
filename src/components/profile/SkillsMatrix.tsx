@@ -8,8 +8,7 @@ export function Row({ title, items }: { title: string; items: string[] }) {
       <div className="text-sm font-medium opacity-80">{title}</div>
       <div className="flex flex-wrap gap-2">
         {items.map((x) => (
-          <span key={x} className="text-xs rounded-full border px-2 py-1">{x}</span>
-        ))}
+            <span key={x} className="px-3 py-1 text-xs rounded-full border bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 border-neutral-300 dark:border-neutral-700 shadow-sm">{x}</span>        ))}
       </div>
     </div>
   )
