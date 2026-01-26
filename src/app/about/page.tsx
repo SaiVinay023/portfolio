@@ -6,7 +6,9 @@ import { profile } from '@/data/profile'
 
 export default function AboutPage() {
   return (
-    <main className="max-w-5xl mx-auto px-6 py-12 space-y-16">
+    <section className="max-w-5xl mx-auto px-6 py-12 space-y-16" style={{
+      color: 'inherit'
+    }}>
       {/* Hero Section */}
       <section className="flex flex-col md:flex-row items-center gap-8">
         <Image
@@ -17,8 +19,8 @@ export default function AboutPage() {
           className="rounded-full border-4 border-gray-200 dark:border-gray-700 shadow-md"
         />
         <div>
-          <h1 className="text-4xl font-bold text-neutral-900 dark:text-neutral-100">{profile.name}</h1>
-          <p className="mt-2 text-lg text-neutral-900 dark:text-neutral-100">{profile.title}</p>
+          <h1 className="text-4xl font-bold text-neutral-900 dark:text-neutral-100" style={{color: 'inherit'}}>{profile.name}</h1>
+          <p className="mt-2 text-lg text-neutral-900 dark:text-neutral-100" style={{color: 'inherit'}}>{profile.title}</p>
           <div className="mt-4 flex gap-4">
             <a href={`mailto:${profile.email}`} target="_blank" rel="noopener noreferrer">
               <Mail className="w-6 h-6 text-neutral-900 dark:text-neutral-100 hover:text-gray-600 dark:hover:text-gray-300" />
@@ -90,6 +92,6 @@ export default function AboutPage() {
       <footer className="text-center text-neutral-600 dark:text-neutral-400 text-sm">
         © {new Date().getFullYear()} {profile.name}. All Rights Reserved.
       </footer>
-    </main>
+    </section>
   )
 }
