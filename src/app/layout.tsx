@@ -5,7 +5,7 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import Link from 'next/link'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
-import { ThemeToggle } from '@/components/common/ThemeToggle'
+import { Navigation } from '@/components/common/Navigation'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3001'
 
@@ -51,31 +51,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       >
         <ThemeProvider>
           <div className="container max-w-6xl mx-auto px-4 py-6">
-            <nav className="flex items-center justify-between">
-              <Link href="/" className="font-semibold tracking-tight">
-                Saivinay Manda
-              </Link>
-              <div className="flex items-center gap-4">
-                <div className="flex gap-4 text-sm">
-                  <Link href="/resume" className="hover:underline">
-                    Resume
-                  </Link>
-                  <Link href="/projects" className="hover:underline">
-                    Projects
-                  </Link>
-                  <Link href="/projects/github" className="hover:underline">
-                    GitHub
-                  </Link>
-                  <Link href="/about" className="hover:underline">
-                    About
-                  </Link>
-                  <Link href="/contact" className="hover:underline">
-                    Contact
-                  </Link>
-                </div>
-                <ThemeToggle />
-              </div>
-            </nav>
+            <Navigation />
 
             <main className="pt-8">{children}</main>
 
