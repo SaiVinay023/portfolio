@@ -50,17 +50,6 @@ html {
   transition: background-color 300ms ease, color 300ms ease;
 }
 
-/* Fix for secondary text opacity */
-html:not(.dark) [class*="opacity-70"],
-html:not(.dark) [class*="opacity-80"] {
-  color: #595959;
-}
-
-html.dark [class*="opacity-70"],
-html.dark [class*="opacity-80"] {
-  color: #a1a1a1;
-}
-
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
