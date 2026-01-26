@@ -1,7 +1,7 @@
 // src/components/mdx-content.tsx
 'use client'
 
-import { useMDXComponent } from 'next-contentlayer/hooks'
+import { useMDXComponent } from 'next-contentlayer2/hooks'
 //import type { MDXComponents } from 'mdx/types'
 
 type Props = { code: string; components?: Record<string, React.ComponentType<any>> }
