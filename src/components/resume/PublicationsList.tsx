@@ -8,7 +8,7 @@ export default function PublicationsList() {
       <h2 className="text-2xl font-semibold">Publications</h2>
       <ul className="space-y-2">
         {profile.publications!.map((p, i) => (
-          <li key={i} className="p-3 border rounded-md bg-gray-50 dark:bg-neutral-900">
+          <li key={i} className="p-3 border rounded-md bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100">
             <div className="font-medium">{p.title}</div>
             <div className="text-sm opacity-70">{p.venue} • {p.year}</div>
           </li>
