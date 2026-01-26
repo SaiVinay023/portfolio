@@ -1,5 +1,5 @@
 {
-  "buildCommand": "contentlayer build && next build",
+  "buildCommand": "contentlayer2 build && next build",
   "outputDirectory": ".next",
   "framework": "nextjs",
   "installCommand": "pnpm install",
