@@ -21,13 +21,13 @@ export default function AboutPage() {
           <p className="mt-2 text-lg text-neutral-900 dark:text-neutral-100">{profile.title}</p>
           <div className="mt-4 flex gap-4">
             <a href={`mailto:${profile.email}`} target="_blank" rel="noopener noreferrer">
-              <Mail className="w-6 h-6 text-neutral-900 dark:text-neutral-100 hover:text-gray-500 dark:hover:text-gray-300" />
+              <Mail className="w-6 h-6 text-neutral-900 dark:text-neutral-100 hover:text-gray-600 dark:hover:text-gray-300" />
             </a>
             <a href={profile.github} target="_blank" rel="noopener noreferrer">
-              <Github className="w-6 h-6 text-neutral-900 dark:text-neutral-100 hover:text-gray-500 dark:hover:text-gray-300" />
+              <Github className="w-6 h-6 text-neutral-900 dark:text-neutral-100 hover:text-gray-600 dark:hover:text-gray-300" />
             </a>
             <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
-              <Linkedin className="w-6 h-6 text-neutral-900 dark:text-neutral-100 hover:text-gray-500 dark:hover:text-gray-300" />
+              <Linkedin className="w-6 h-6 text-neutral-900 dark:text-neutral-100 hover:text-gray-600 dark:hover:text-gray-300" />
             </a>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function AboutPage() {
           {(profile.languages ?? ['English', 'Telugu', 'Hindi']).map((lang) => (
             <span
               key={lang}
-              className="px-3 py-1 text-sm rounded-full border bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100"
+              className="px-3 py-1 text-sm rounded-full border bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 border-neutral-300 dark:border-neutral-700"
             >
               {lang}
             </span>
@@ -75,7 +75,7 @@ export default function AboutPage() {
                 {skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 text-sm rounded-full border bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100"
+                    className="px-3 py-1 text-sm rounded-full border bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 border-neutral-300 dark:border-neutral-700"
                   >
                     {skill}
                   </span>
@@ -87,7 +87,7 @@ export default function AboutPage() {
       </section>
 
       {/* Footer */}
-      <footer className="text-center text-gray-500 dark:text-gray-400 text-sm">
+      <footer className="text-center text-neutral-600 dark:text-neutral-400 text-sm">
         © {new Date().getFullYear()} {profile.name}. All Rights Reserved.
       </footer>
     </main>
