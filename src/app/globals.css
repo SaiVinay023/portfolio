@@ -15,6 +15,11 @@ html:not(.dark) a {
   color: #0ea5e9;
 }
 
+html:not(.dark) border,
+html:not(.dark) [class*="border"] {
+  border-color: #d4d4d8;
+}
+
 /* Dark mode */
 html.dark {
   color-scheme: dark;
@@ -29,6 +34,11 @@ html.dark a {
   color: #38bdf8;
 }
 
+html.dark border,
+html.dark [class*="border"] {
+  border-color: #404040;
+}
+
 /* Smooth transitions */
 body,
 a,
@@ -38,6 +48,17 @@ button {
 
 html {
   transition: background-color 300ms ease, color 300ms ease;
+}
+
+/* Fix for secondary text opacity */
+html:not(.dark) [class*="opacity-70"],
+html:not(.dark) [class*="opacity-80"] {
+  color: #595959;
+}
+
+html.dark [class*="opacity-70"],
+html.dark [class*="opacity-80"] {
+  color: #a1a1a1;
 }
 
 /* Custom scrollbar */
