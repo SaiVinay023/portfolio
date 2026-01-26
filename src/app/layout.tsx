@@ -67,9 +67,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           suppressHydrationWarning
         />
       </head>
-      <body
-        className={`${GeistSans.className} ${GeistMono.variable} min-h-dvh bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100`}
-      >
+      <body className={`${GeistSans.className} ${GeistMono.variable} min-h-dvh`}>
         <ThemeProvider>
           <div className="container max-w-6xl mx-auto px-4 py-6">
             <Navigation />
