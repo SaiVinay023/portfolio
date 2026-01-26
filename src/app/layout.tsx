@@ -3,7 +3,6 @@ import './globals.css'
 import { ReactNode } from 'react'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import Link from 'next/link'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
 import { Navigation } from '@/components/common/Navigation'
 
@@ -43,9 +42,31 @@ export const viewport: Viewport = {
   themeColor: '#0a0a0a',
 }
 
+const themeScript = `
+  (function() {
+    try {
+      const theme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = theme === 'dark' || (!theme && prefersDark);
+      
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    } catch (e) {}
+  })()
+`
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{ __html: themeScript }}
+          suppressHydrationWarning
+        />
+      </head>
       <body
         className={`${GeistSans.className} ${GeistMono.variable} min-h-dvh bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100`}
       >
