@@ -6,7 +6,7 @@ export const profile = {
   email: 'saivinay023@gmail.com',
   linkedin: 'https://www.linkedin.com/in/saivinaymanda',
   github: 'https://github.com/SaiVinay023',
-  website: 'https://svmanda.netlify.app',
+  website: 'https://www.fulfio.eu/',
   summary:
     'Full stack developer with 3+ years building scalable web apps with React, Node, Express, NextJS, NestJS and MongoDB. Strong with PostgreSQL, REST APIs and AWS. Comfortable with real time features, CI/CD, Docker and Agile. Passionate about creating impactful software solutions and continuously learning new technologies.',
 
