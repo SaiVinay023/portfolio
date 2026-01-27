@@ -17,3 +17,5 @@ export default function HomePage() {
     </section>
   )
 }
+
+// Note: The metadata for the page is defined in 'src/app/layout.tsx'
