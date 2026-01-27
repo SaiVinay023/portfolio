@@ -6,12 +6,12 @@ import { Menu, X } from 'lucide-react'
 import { ThemeToggle } from './ThemeToggle'
 
 const navLinks = [
-  { href: '/resume', label: 'Resume' },
+  { href: '/journey', label: 'Journey' },
+  //{ href: '/resume', label: 'Resume' },
   { href: '/projects', label: 'Projects' },
   { href: '/projects/github', label: 'GitHub' },
   { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
-  { href: '/journey', label: 'Journey' },
+ // { href: '/contact', label: 'Contact' },
 ]
 
 export function Navigation() {

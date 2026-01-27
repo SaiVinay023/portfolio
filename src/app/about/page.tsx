@@ -17,7 +17,7 @@ export default function AboutPage() {
             Beyond the Code
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
-            I'm Saivinay - a full-stack developer, community builder, and lifelong learner from Genova, Italy. 
+            I'm Saivinay - a full-stack developer, community builder, and lifelong learner from Italy. 
             Here's my story beyond the professional timeline.
           </p>
         </div>
@@ -32,7 +32,7 @@ export default function AboutPage() {
               <p className="text-lg leading-relaxed text-gray-800 dark:text-gray-200">
                 My journey into tech wasn't a straight line - and I wouldn't have it any other way. 
                 I started with <span className="font-bold text-blue-600 dark:text-blue-400">mechanical engineering</span> in India, got fascinated by <span className="font-bold text-purple-600 dark:text-purple-400">robotics</span>, 
-                and eventually found my true calling in <span className="font-bold text-blue-600 dark:text-blue-400">web development</span>.
+                and eventually found my true calling in <span className="font-bold text-blue-600 dark:text-blue-400">Web development</span>.
               </p>
             </div>
             

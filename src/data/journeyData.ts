@@ -5,17 +5,29 @@ export const journeyData: TimelineItem[] = [
   {
     id: '1',
     type: 'work',
+    title: 'Full Stack Developer ((Freelance - stock options))',
+    organization: 'Myxoflow',
+    location: 'Italy (Remote)',
+    startDate: '2024-10-15',
+    description: 'Building enterprise B2B and B2C SaaS application. Multiple Products.',
+    skills: ['Next.js', 'NestJS', 'TypeScript', 'Supabase', 'Prisma', 'REST APIs', 'RBAC', 'Monorepo', 'Reactjs'],
+  },
+  
+  {
+    id: '2',
+    type: 'work',
     title: 'Full Stack Developer (Freelance)',
     organization: 'Carsu Technologies',
     location: 'Netherlands (Remote)',
-    startDate: '2024-10-01',
+    startDate: '2024-06-01',
+    endDate: '2024-09-30',
     description: 'Building enterprise B2B SaaS application with Next.js, NestJS, and TypeScript. Implemented multi-tenant architecture, RBAC with Clerk Auth, and Supabase RLS. Reduced dependency installation time by 40% with pnpm monorepo setup.',
     skills: ['Next.js', 'NestJS', 'TypeScript', 'Supabase', 'Prisma', 'REST APIs', 'RBAC', 'Monorepo'],
   },
 
   // === RECENT EXPERIENCE ===
   {
-    id: '2',
+    id: '3',
     type: 'work',
     title: 'Software Engineer (Research Intern)',
     organization: 'Italian Institute of Technology (IIT)',
@@ -27,7 +39,7 @@ export const journeyData: TimelineItem[] = [
   },
 
   {
-    id: '3',
+    id: '4',
     type: 'work',
     title: 'Full Stack Developer',
     organization: 'ManyDesigns Srl',
@@ -35,12 +47,12 @@ export const journeyData: TimelineItem[] = [
     startDate: '2023-05-01',
     endDate: '2023-11-01',
     description: 'Built scalable React components with TypeScript and Ant Design. Implemented role-based authentication (user/admin/manager), dynamic navigation with breadcrumbs. Integrated RESTful APIs with efficient state handling, improving task completion by 25%.',
-    skills: ['React', 'TypeScript', 'Ant Design', 'REST APIs', 'State Management', 'Agile/Scrum'],
+    skills: ['React', 'TypeScript', 'PostgreSQL', 'Vue', 'Ant Design', 'REST APIs', 'State Management', 'Agile/Scrum'],
   },
 
   // === EDUCATION - Show technical foundation ===
   {
-    id: '4',
+    id: '5',
     type: 'education',
     title: 'Masters in Robotics Engineering (LM-32)',
     organization: 'Universit\u00e0 degli Studi di Genova',
@@ -48,12 +60,12 @@ export const journeyData: TimelineItem[] = [
     startDate: '2021-09-01',
     endDate: '2024-10-01',
     description: 'Advanced software development, AI/ML, computer vision, and distributed systems. Focused on software engineering principles applicable to modern web architecture and complex system design.',
-    skills: ['Software Architecture', 'AI/ML', 'Computer Vision', 'Distributed Systems', 'System Design'],
+    skills: ['Software Architecture', 'AI/ML', 'Computer Vision', 'Distributed Systems', 'System Design', 'Python', 'C++'],
   },
 
   // === EARLY WEB EXPERIENCE - Shows web dev roots ===
   {
-    id: '5',
+    id: '6',
     type: 'work',
     title: 'Web Developer',
     organization: 'Aceteq Web Services',
@@ -66,7 +78,7 @@ export const journeyData: TimelineItem[] = [
 
   // === FOUNDATION - Keep brief ===
   {
-    id: '6',
+    id: '7',
     type: 'education',
     title: 'Bachelors in Mechanical Engineering',
     organization: 'The National Institute of Engineering',
@@ -74,12 +86,12 @@ export const journeyData: TimelineItem[] = [
     startDate: '2015-08-01',
     endDate: '2019-01-01',
     description: 'Technical foundation in systems thinking, problem-solving, and engineering principles. Built analytical and logical reasoning skills.',
-    skills: ['Problem Solving', 'Systems Thinking', 'Engineering Fundamentals'],
+    skills: ['Problem Solving', 'Systems Thinking', 'Engineering Fundamentals', 'Analytical Skills', 'Team Collaboration'],
   },
 
   // === FUTURE FOCUS ===
   {
-    id: '7',
+    id: '8',
     type: 'learning',
     title: 'AI/LLM Integration in Web Applications',
     startDate: '2024-11-01',

@@ -13,7 +13,7 @@ export default function HomePage() {
       <Hero />
       <Highlights />
       <StackCloud />
-      <ProjectGrid />
+      {/*<ProjectGrid /> */}
     </section>
   )
 }

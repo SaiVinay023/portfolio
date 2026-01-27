@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { Download } from 'lucide-react';
 
 export type FilterType = 'all' | 'webdev';
 
@@ -34,7 +35,15 @@ const TimelineFilter: React.FC<TimelineFilterProps> = ({ activeFilter, onFilterC
         <span>🎯</span>
         Web Development Only
       </button>
-    </div>
+          <a
+            href="/resume.pdf"
+            download="SaiVinay_Manda_Resume.pdf"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all shadow-md hover:shadow-lg"
+          >
+            <Download className="w-5 h-5" />
+            Download CV
+          </a>
+        </div>
   );
 };
 
