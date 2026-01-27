@@ -92,13 +92,13 @@ export const profile = {
 
   // ✅ Added this field
   languages: ['English', 'Telugu', 'Hindi'],
- /*  certificates: [
+   certificates: [
     { name: 'AWS Certified Cloud Practitioner', year: '2024' },
     { name: 'Google Professional Cloud Architect', year: '2023' },
     // add/remove as you like
-  ], */
+  ],
   
- /* publications: [
+  publications: [
     {
       title: 'Efficient XYZ Scheduling with ABC Heuristics',
       authors: ['Saivinay Manda', 'Co-author Name'],
@@ -112,7 +112,7 @@ export const profile = {
       venue: 'Medium',
       year: '2023',
     },
-  ],*/
+  ],
 
   skills: {
     frontend: [
