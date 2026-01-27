@@ -23,7 +23,7 @@ export default function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-3 pt-4">
           <Link 
-            href="/projects" 
+            href="/projects/github" 
             className="px-6 py-3 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-950 font-medium text-center transition-all hover:opacity-90 active:scale-95"
           >
             View projects

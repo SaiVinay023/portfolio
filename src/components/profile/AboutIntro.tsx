@@ -9,7 +9,7 @@ export default function AboutIntro() {
       <h2 className="text-2xl font-semibold">About</h2>
       <p className="max-w-2xl opacity-90">{profile.summary}</p>
       <div className="flex gap-3">
-        <Link href="/projects" className="px-4 py-2 rounded-lg bg-black text-white">See my projects</Link>
+        <Link href="/projects/github" className="px-4 py-2 rounded-lg bg-black text-white">See my projects</Link>
         <a href={`mailto:${profile.email}`} className="px-4 py-2 rounded-lg border">Email me</a>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import Timeline from '@/components/Journey/Timeline';
 import { journeyData } from '@/data/journeyData';
+import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react'
 
 export const metadata = {
   title: 'My Journey | Full Stack Developer',
@@ -64,12 +65,24 @@ export default function JourneyPage() {
             I'm actively seeking full-stack developer roles where I can bring my unique perspective 
             and passion for web development.
           </p>
-          <a 
-            href="/contact" 
-            className="inline-block px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors"
-          >
-            Get In Touch
-          </a>
+          <div className="flex gap-6 justify-center flex-wrap">
+            <a 
+              href="mailto:saivinay023@gmail.com" 
+              className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white rounded-2xl hover:bg-blue-700 transition-all font-bold shadow-lg hover:shadow-blue-500/25"
+            >
+              <Mail className="w-6 h-6" />
+              Email Me
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/saivinaymanda" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-8 py-4 border-2 border-gray-200 dark:border-gray-700 rounded-2xl hover:border-blue-500 hover:text-blue-600 transition-all font-bold"
+            >
+              <Linkedin className="w-6 h-6" />
+              LinkedIn
+            </a>
+          </div>
         </div>
       </section>
     </main>
